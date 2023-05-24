@@ -17,10 +17,10 @@ This command compiles the executable program, and you can run it by executing:
 
 `./hsh`
 
-##Program Usage
+## Program Usage
 Once the shell program is running, you can start entering commands. The shell supports both built-in commands and external executable files.
 
-Built-in Commands
+### Built-in Commands
 The following built-in commands are supported:
 
 - cd [directory]: Change the current working directory to the specified directory.
@@ -28,7 +28,7 @@ The following built-in commands are supported:
 - exit: Exit the shell.
 * To run a built-in command, simply type the command followed by any necessary arguments and press Enter.
 
-Example:
+##### Example:
 
 `$ cd Documents`
 
@@ -54,8 +54,23 @@ This file handles the "exit" commands inputted to the shell.
 * main.h
 main.h contains all the function prototypes and header files used in the shell program.
 
-Path.c
+* Path.c
 The path.c file handles the PATH environment variable when executing commands.
+
+* and.c
+The and.c file handles the "&&" commands.
+
+* or.c
+The or.c file handles the "||" commands.
+
+* semi_colon.c
+The semi_colon.c file handles the ";" commands.
+
+* comment.c
+The comment.c file handles the "#" comment in the commands.
+
+* sort.c
+The sort.c file handles the sorting of the commands directing each to functions that will execute them.
 
 Conclusion
 The simple shell provides a basic command-line interface that allows you to interact with an operating system. By following the instructions in this documentation, you should be able to use the simple shell to run commands and execute programs.
