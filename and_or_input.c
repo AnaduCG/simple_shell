@@ -30,7 +30,7 @@ int and_or_user_input(char *input, char *e_ex, int sc, list_t *_environ)
 				if (cat_str[0] == '#')
 					continue;
 				_strcat(input, cat_str);
-
+				free(cat_str);
 				ret_val = semi_colon(input, e_ex, sc, _environ);
 				return (ret_val);
 			}

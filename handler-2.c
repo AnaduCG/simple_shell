@@ -23,22 +23,22 @@ int check_error_comp(char **arr, char *token, int j,
 			(arr[j][_strlen(arr[j]) - 2] == '&' &&
 			 arr[j][_strlen(arr[j]) - 1] == '&'))
 	{
-		if (arr[j][_strlen(arr[j]) - 3])
+		if (_strlen(arr[j]) > 2)
 		{
 			if (arr[j][_strlen(arr[j]) - 3] == '|' ||
 					arr[j][_strlen(arr[j]) - 3] == '&')
 			{
+				free_array(arr);
 				return (get_operators(token, e_ex, sc, input, _environ));
 			}
 			else
 			{
+				free_array(arr);
 				return (and_or_user_input(token, e_ex, sc, _environ));
 			}
 		}
-		else
-		{
-			return (and_or_user_input(token, e_ex, sc, _environ));
-		}
+		free_array(arr);
+		return (and_or_user_input(token, e_ex, sc, _environ));
 	}
 	free_array(arr);
 	return (get_operators(token, e_ex, sc, input, _environ));
