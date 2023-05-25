@@ -74,7 +74,7 @@ int or_operator(char *token, char *e_ex, int sc, list_t *_environ)
  *@token: user input to be checked
  *@e_ex: program executable for error handling
  *@sc: session count for error handling
- *@ret_val: funtion return value
+ *@ret_val: function return value
  *@input: user input to be freed
  *@_environ: custom environmental variables for the program
  *Return: returns 0 on succeess and nonzero on error

@@ -10,10 +10,10 @@
  */
 int and_or_input_err(char *e_ex, int sc)
 {
-	_print_str(e_ex);
-	_print_str(": ");
-	_print_int(sc);
-	_print_str(AND_OR_INPUT_ERR);
+	print_error(e_ex);
+	print_error(": ");
+	error_num(sc);
+	print_error(AND_OR_INPUT_ERR);
 	return (2);
 }
 /**
@@ -26,11 +26,11 @@ int and_or_input_err(char *e_ex, int sc)
  */
 int cd_err(char *e_ex, int sc, char *dir)
 {
-	_print_str(e_ex);
-	_print_str(": ");
-	_print_int(sc);
-	_print_str(CD_ERROR);
-	_print_str(dir);
-	_putchar('\n');
+	print_error(e_ex);
+	print_error(": ");
+	error_num(sc);
+	print_error(CD_ERROR);
+	print_error(dir);
+	print_error("\n");
 	return (2);
 }
